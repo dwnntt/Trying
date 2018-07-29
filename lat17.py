@@ -2,11 +2,23 @@
 
 x = 50
 
-def fungsi(x):
+def fungsi():
     print 'x = ', x
-    x = 2
-    print 'merubah lokal variabel x = ', x
 
-fungsi(100)
+def fungsi2():
+    x = 100  # menulis ke lokal variabel
+    print 'x = ', x
 
-print 'nilai x masih %s' % x
+def fungsi3():
+    global x
+    x = 100
+    print 'x = ', x
+
+fungsi()
+print 'nilai x = ', x
+
+fungsi2()
+print 'nilai x = ', x
+
+fungsi3()
+print 'nilai x = ', x
